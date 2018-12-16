@@ -3,15 +3,15 @@ defmodule CRUDimentary.MixProject do
 
   def project do
     [
-      app: :crudimentary,
+      app: :crudimentary_ecto,
       version: "0.2.5",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      name: "CRUDimentary",
-      source_url: "https://github.com/stankec/crudimentary",
+      name: "CRUDimentary - Ecto",
+      source_url: "https://github.com/CRUDimentary/crudimentary-ecto",
       docs: [
-        main: "Crudimentary",
+        main: "CRUDimentary - Ecto",
         extras: ["README.md"]
       ]
     ]
@@ -25,14 +25,10 @@ defmodule CRUDimentary.MixProject do
 
   defp deps do
     [
-      {:absinthe, "~> 1.4"},
+      {:ecto_sql, "~> 4.0"},
       {:ex_doc, "~> 0.16"},
-      {:inflex, "~> 1.10.0"},
       {:odgn_json_pointer, "~> 2.3"},
-      {:paginator, "~> 0.6.0"},
-      {:phoenix, ">= 0.0.0"},
-      {:confex, "~> 3.3.1"},
-      {:dataloader, "~> 1.0.4"}
+      {:confex, "~> 3.3.1"}
     ]
   end
 end
